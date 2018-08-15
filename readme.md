@@ -35,7 +35,7 @@ If not, you will get boolean false as the result.
 
 ## Deal With Large Files or Stream Mode
 You can add second parameter with value true.
-```shell
+```php
 $file = app(FileGrabber::class)->from($url, true);
 // or
 $file = FileGrab::from($url, true);
@@ -43,7 +43,7 @@ $file = FileGrab::from($url, true);
 
 ## What Next ?
 Since the file exists in temporary folder so after file grabbed, then modify or move it to another place.
-```shell
+```php
 // move to another folder
 $file->move('/home/my/another/folder', 'new_name_with.extension');
 ```
