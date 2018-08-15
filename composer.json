@@ -1,0 +1,31 @@
+{
+    "name": "suitcore/filegrabber",
+    "description": "Grab a file from outer space and save into your universe.",
+    "keywords": ["suitcore", "filegrabber"],
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Suitcore\\FileGrabber\\": "src/"
+        }
+    },
+    "require": {
+        "suitcore/file": "dev-master",
+        "guzzlehttp/guzzle": "~6.0",
+        "illuminate/support": "~5.5|~5.6|~5.7"
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Suitcore\\FileGrabber\\FileGrabberServiceProvider"
+            ],
+            "aliases": {
+                "FileGrab": "Suitcore\\FileGrabber\\Facades\\FileGrab"
+            }
+        }
+    }
+}
