@@ -8,7 +8,8 @@ install via composer :
 ```shell
 composer require suitcore/filegrabber
 ```
-Use in you file :
+
+Use in your code :
 ```php
 <?php
 
@@ -29,17 +30,19 @@ $file = FileGrab::from($url);
 ```
 
 ## Result
-If success, the result is class Suitcore\File\File which is inherit from Symfony\Component\HttpFoundation\File\File.
+If success, the result is class `Suitcore\File\File` which is inherit from `Symfony\Component\HttpFoundation\File\File`.
 If not, you will get boolean false as the result.
 
-## To Deal with Large files or stream mode, you can add second parameter with value true.
+## Deal With Large Files or Stream Mode
+You can add second parameter with value true.
 ```shell
 $file = app(FileGrabber::class)->from($url, true);
 // or
 $file = FileGrab::from($url, true);
 ```
 
-## The File exist in temporary folder, so after file grabbed, then modify or move it to another place.
+## What Next ?
+Since the file exists in temporary folder so after file grabbed, then modify or move it to another place.
 ```shell
 // move to another folder
 $file->move('/home/my/another/folder', 'new_name_with.extension');
